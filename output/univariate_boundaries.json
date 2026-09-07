@@ -1,0 +1,79 @@
+{
+  "tenure": {
+    "A": -0.00042629342314917857,
+    "B": -0.017343989840246564,
+    "C": -0.037314611047719604,
+    "discriminant": 0.00023718609047052586,
+    "all_roots": [
+      -38.40645331594791,
+      -2.279114179136688
+    ],
+    "in_domain_roots": [],
+    "is_globally_equal": false,
+    "is_lambda_globally_equal": false,
+    "display_domain": [
+      0.0,
+      72.0
+    ],
+    "decision_regions": [
+      {
+        "interval": [
+          0.0,
+          72.0
+        ],
+        "predicted_class": 0,
+        "label": "Retained (0)"
+      }
+    ],
+    "likelihood_equality_points": [
+      -72.44932955292055,
+      31.763762057835955
+    ],
+    "likelihood_equality_in_domain": [
+      31.763762057835955
+    ]
+  },
+  "MonthlyCharges": {
+    "A": -0.00031062759146396695,
+    "B": 0.06045410723702896,
+    "C": -3.4732422030757872,
+    "discriminant": -0.0006608403586235395,
+    "all_roots": [],
+    "in_domain_roots": [],
+    "is_globally_equal": false,
+    "is_lambda_globally_equal": false,
+    "display_domain": [
+      18.25,
+      118.75
+    ],
+    "decision_regions": [
+      {
+        "interval": [
+          18.25,
+          118.75
+        ],
+        "predicted_class": 0,
+        "label": "Retained (0)"
+      }
+    ],
+    "likelihood_equality_points": [
+      57.73584013007613,
+      136.88340458064908
+    ],
+    "likelihood_equality_in_domain": [
+      57.73584013007613
+    ]
+  },
+  "gender": {
+    "boundary_analysis": null,
+    "all_roots": null,
+    "in_domain_roots": null,
+    "is_globally_equal": false,
+    "is_lambda_globally_equal": false,
+    "categorical_rules": {
+      "Female (0)": 0,
+      "Male (1)": 0
+    },
+    "likelihood_equality_points": []
+  }
+}

@@ -1,0 +1,28 @@
+======================================================================
+ESTUDO DIRIGIDO - INTELIGÊNCIA ARTIFICIAL 2026.1 (UFAPE)
+RELATÓRIO DE EXECUÇÃO: LOTE 4 (AVALIAÇÃO FINAL CONGELADA NO TESTE)
+======================================================================
+1. DADOS DA AVALIAÇÃO CONGELADA:
+  - Partição: Teste Canônico 20% (N = 1409 observações)
+  - Distribuição Real do Teste: Não-Churn (0) = 1035 (73.46%) | Churn (1) = 374 (26.54%)
+  - Distribuição Predita:       Não-Churn (0) = 1179 (83.68%) | Churn (1) = 230 (16.32%)
+----------------------------------------------------------------------
+2. MATRIZ DE CONFUSÃO (CANÔNICA [[VN, FP], [FN, VP]]):
+                 Predito Não-Churn (0)   Predito Churn (1)    Total Real
+  Real 0 (Retido)      VN =   952 (91.98%)        FP =    83 ( 8.02%)       1035
+  Real 1 (Churn)       FN =   227 (60.70%)        VP =   147 (39.30%)        374
+  Total Predito              1179                       230             1409
+----------------------------------------------------------------------
+3. MÉTRICAS DE DESEMPENHO COMPUTADAS:
+  - Acurácia:  0.7800 (78.00%) [Fórmula: (VP + VN) / N]
+  - Precisão:  0.6391 (63.91%) [Fórmula: VP / (VP + FP)]
+  - Revocação: 0.3930 (39.30%) [Fórmula: VP / (VP + FN)]
+  - F1-Score:  0.4868 (48.68%) [Fórmula: 2*VP / (2*VP + FP + FN)]
+----------------------------------------------------------------------
+4. INTERPRETAÇÃO NO CONTEXTO DE NEGÓCIOS (Cenários Hipotéticos):
+  - Verdadeiros Negativos (VN): Clientes que permaneceram (classe real 0) e o modelo previu corretamente.
+  - Falsos Positivos (FP): Clientes retidos que o modelo sugeriu como churn (podem gerar esforços hipotéticos de retenção mal-direcionados).
+  - Falsos Negativos (FN): Clientes que evadiram mas o modelo não previu (oportunidade de intervenção não sinalizada).
+  - Verdadeiros Positivos (VP): Casos reais de evasão onde o modelo acertou (candidatos plausíveis a intervenção).
+  - Nota sobre A Priori: A proporção dominante de retenção (~73,5%) influencia a decisão e aumenta o sarrafo para predizer churn.
+======================================================================

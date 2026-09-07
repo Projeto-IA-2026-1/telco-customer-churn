@@ -1,0 +1,25 @@
+{
+  "true_negative_vn": 952,
+  "false_positive_fp": 83,
+  "false_negative_fn": 227,
+  "true_positive_vp": 147,
+  "total_samples": 1409,
+  "matrix_2x2": [
+    [
+      952,
+      83
+    ],
+    [
+      227,
+      147
+    ]
+  ],
+  "row_percentages": {
+    "class_0_vn_rate": 0.9198067632850242,
+    "class_0_fp_rate": 0.08019323671497584,
+    "class_1_fn_rate": 0.606951871657754,
+    "class_1_vp_rate": 0.393048128342246,
+    "class_0_undefined_reason": null,
+    "class_1_undefined_reason": null
+  }
+}

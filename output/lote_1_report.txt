@@ -1,0 +1,43 @@
+======================================================================
+ESTUDO DIRIGIDO - INTELIGÊNCIA ARTIFICIAL 2026.1 (UFAPE)
+RELATÓRIO DE EXECUÇÃO: LOTE 1 (CARGA, VALIDAÇÃO E PARTIÇÃO)
+======================================================================
+Arquivo CSV:        /mnt/0768adeb-073e-454e-b499-10f81dc4a37a/Projects/faculdade/IA/estudo-dirigido-segunda-va/dataset/WA_Fn-UseC_-Telco-Customer-Churn.csv
+SHA-256 do CSV:     88be4b93fbe0cc83421af1c503794c97c342eca914c1576db7c276e61d61358a
+Hash esperado:      88be4b93fbe0cc83421af1c503794c97c342eca914c1576db7c276e61d61358a
+Integridade SHA256: CONFERE (CORRETO)
+----------------------------------------------------------------------
+CONFIGURAÇÃO EXPERIMENTAL:
+  Proporção Treino/Teste: 0.8 / 0.2 (80/20)
+  Estratificação:         True (baseada em 'Churn')
+  Semente aleatória:      42
+  Features selecionadas:  ['tenure', 'MonthlyCharges', 'gender']
+  Variável alvo:          Churn
+  Identificador:          customerID (apenas rastreamento; excluído das features)
+  Mapeamento gender:      {'Female': 0, 'Male': 1}
+  Mapeamento Churn:       {'No': 0, 'Yes': 1}
+----------------------------------------------------------------------
+CONTAGENS E PROPORÇÕES DAS CLASSES:
+  Total de Amostras: 7043
+    - Classe 0 (Não Churn):  5174 (73.46%)
+    - Classe 1 (Churn):      1869 (26.54%)
+
+  Partição de Treinamento: 5634 amostras (79.99%)
+    - Classe 0 (Não Churn):  4139 (73.46%)
+    - Classe 1 (Churn):      1495 (26.54%)
+
+  Partição de Teste:       1409 amostras (20.01%)
+    - Classe 0 (Não Churn):  1035 (73.46%)
+    - Classe 1 (Churn):       374 (26.54%)
+----------------------------------------------------------------------
+VERIFICAÇÃO DE INTEGRIDADE DA PARTIÇÃO:
+  Interseção Treino ∩ Teste: 0 (Disjunção estrita)
+  Cobertura (Treino ∪ Teste): 7043 / 7043 (Cobertura total)
+  customerID nas features:   NÃO (CORRETO)
+----------------------------------------------------------------------
+NOTA DE CONFORMIDADE COM O GUIA E LIMITES DO LOTE 1:
+  [✓] Carga e validação estrita sem descarte de linhas por TotalCharges.
+  [✓] customerID restrito ao rastreamento da partição.
+  [✓] Divisão 80/20 estratificada com semente 42 (configuração canônica reproduzível).
+  [✓] NENHUM MODELO, ESTIMADOR OU CLASSIFICADOR FOI AJUSTADO NESTA RODADA.
+======================================================================

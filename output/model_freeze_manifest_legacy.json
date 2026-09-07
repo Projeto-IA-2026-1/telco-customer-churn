@@ -1,0 +1,92 @@
+{
+  "status": "FROZEN_FOR_FINAL_EVALUATION",
+  "dataset_sha256": "88be4b93fbe0cc83421af1c503794c97c342eca914c1576db7c276e61d61358a",
+  "split_configuration": {
+    "total_samples": 7043,
+    "train_samples": 5634,
+    "test_samples": 1409,
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratified": true
+  },
+  "model_parameters": {
+    "model_type": "HybridNaiveBayesClassifier",
+    "features": [
+      "tenure",
+      "MonthlyCharges",
+      "gender"
+    ],
+    "classes": [
+      0,
+      1
+    ],
+    "smoothing_alpha": 0.0,
+    "priors": {
+      "total_count": 5634,
+      "count_0": 4139,
+      "count_1": 1495,
+      "pi_0": 0.7346467873624423,
+      "pi_1": 0.2653532126375577,
+      "log_pi_0": -0.3083654566875856,
+      "log_pi_1": -1.3266934626115312
+    },
+    "parameters": {
+      "tenure": {
+        "class_0": {
+          "mu": 37.58758154143513,
+          "variance": 582.765161075436,
+          "sigma": 24.14052942823409,
+          "n_samples": 4139
+        },
+        "class_1": {
+          "mu": 18.358528428093646,
+          "variance": 389.32563796825536,
+          "sigma": 19.73133644658302,
+          "n_samples": 1495
+        }
+      },
+      "MonthlyCharges": {
+        "class_0": {
+          "mu": 61.34318676008698,
+          "variance": 969.1786899895228,
+          "sigma": 31.131634874987256,
+          "n_samples": 4139
+        },
+        "class_1": {
+          "mu": 74.86016722408027,
+          "variance": 604.939943450297,
+          "sigma": 24.595526899220864,
+          "n_samples": 1495
+        }
+      },
+      "gender": {
+        "class_0": {
+          "p_1": 0.5035032616574052,
+          "p_0": 0.4964967383425948,
+          "n_ones": 2084,
+          "n_zeros": 2055,
+          "n_samples": 4139,
+          "alpha": 0.0
+        },
+        "class_1": {
+          "p_1": 0.5010033444816053,
+          "p_0": 0.49899665551839467,
+          "n_ones": 749,
+          "n_zeros": 746,
+          "n_samples": 1495,
+          "alpha": 0.0
+        }
+      }
+    }
+  },
+  "source_code_sha256": {
+    "__init__.py": "eee8fae30c21763a58272cbb9174123fd2386db1d77338dda447c588385f1ffb",
+    "data_loader.py": "1d384398613710355f3dc0cbccab876e62789e2aa43ccc8cb2f2ee60f894258a",
+    "distributions.py": "159b4b9ed5679a02385084b4f6e73c2d74b8261ea1cc3351ea560dbdc3299ddb",
+    "metrics.py": "5a705ae4e9a5ccc98ad464f76fecd2f105103cd7ac29fdf60f068b8540037c37",
+    "naive_bayes.py": "cf3e68e51e5ba5cdad298a58931fc6a0876436f8ad9fa38e25fb20784044c43c",
+    "univariate.py": "10334732c16b25c18000e37ad23d80a3ae70cecc18652c4c071ef179848b59fd",
+    "visualizer.py": "fcb608f2d8ac9bfb91a4e01be5ee7d7246762c5a6a0e75ac4560461119375359"
+  },
+  "zero_leakage_attestation": "Este manifesto atesta que o modelo Naive Bayes Híbrido foi ajustado estritamente com as 5.634 observações de treino. Nenhum dado de teste foi consultado, inferido ou utilizado em qualquer etapa de desenvolvimento."
+}

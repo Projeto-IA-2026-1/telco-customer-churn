@@ -1,0 +1,24 @@
+======================================================================
+ESTUDO DIRIGIDO - INTELIGÊNCIA ARTIFICIAL 2026.1 (UFAPE)
+RELATÓRIO DE EXECUÇÃO: LOTE 3 (NAIVE BAYES MANUAL E BENCHMARK)
+======================================================================
+1. CLASSIFICADOR NAIVE BAYES HÍBRIDO (TREINADO):
+  - Features: ['tenure', 'MonthlyCharges', 'gender']
+  - Prior pi_0: 0.734647 (log = -0.308365)
+  - Prior pi_1: 0.265353 (log = -1.326693)
+  - Suavização de Laplace (alpha): 0.0
+  - Função Discriminante Logarítmica:
+      L_c(x) = log(pi_c) + logNormal(tenure|c) + logNormal(MonthlyCharges|c) + logBernoulli(gender|c)
+  - Desempate determinístico: empate exato L_1 == L_0 -> 0
+----------------------------------------------------------------------
+2. BENCHMARK DE DESENVOLVIMENTO (SCIKIT-LEARN DECOMPOSITION):
+  - Partição avaliada: Treinamento exclusivamente (N = 5.634 amostras)
+  - Concordância nas predições: 5634 / 5634 (100.00%)
+  - Diferença máxima absoluta nos escores log-conjuntos: 2.13e-14 (Tolerância atol=1e-12)
+  - Diferença máxima absoluta nas probabilidades a posteriori: 3.66e-15 (Tolerância rtol=1e-9)
+  - Status de Paridade: PARIDADE PERFEITA ATINGIDA
+----------------------------------------------------------------------
+3. CONGELAMENTO PARA AVALIAÇÃO FINAL (LOTE 4):
+  - O modelo, seus parâmetros, o split e o código-fonte estão CONGELADOS.
+  - ZERO DATA LEAKAGE: A partição de teste (N = 1.409) permanece INTOCADA.
+======================================================================

@@ -1,0 +1,80 @@
+{
+  "priors": {
+    "total_count": 5634,
+    "count_0": 4139,
+    "count_1": 1495,
+    "pi_0": 0.7346467873624423,
+    "pi_1": 0.2653532126375577,
+    "log_pi_0": -0.3083654566875856,
+    "log_pi_1": -1.3266934626115312
+  },
+  "features": {
+    "tenure": {
+      "type": "discrete_numeric_continuous_approximation",
+      "family": "gaussian",
+      "estimator": "MLE (ddof=0)",
+      "display_domain": [
+        0.0,
+        72.0
+      ],
+      "class_0": {
+        "mu": 37.58758154143513,
+        "variance": 582.765161075436,
+        "sigma": 24.14052942823409,
+        "n_samples": 4139
+      },
+      "class_1": {
+        "mu": 18.358528428093646,
+        "variance": 389.32563796825536,
+        "sigma": 19.73133644658302,
+        "n_samples": 1495
+      }
+    },
+    "MonthlyCharges": {
+      "type": "continuous",
+      "family": "gaussian",
+      "estimator": "MLE (ddof=0)",
+      "display_domain": [
+        18.25,
+        118.75
+      ],
+      "class_0": {
+        "mu": 61.34318676008698,
+        "variance": 969.1786899895228,
+        "sigma": 31.131634874987256,
+        "n_samples": 4139
+      },
+      "class_1": {
+        "mu": 74.86016722408027,
+        "variance": 604.939943450297,
+        "sigma": 24.595526899220864,
+        "n_samples": 1495
+      }
+    },
+    "gender": {
+      "type": "categorical_binary",
+      "family": "bernoulli",
+      "estimator": "MLE (alpha=0.0)",
+      "display_domain": [
+        0.0,
+        1.0
+      ],
+      "class_0": {
+        "p_1": 0.5035032616574052,
+        "p_0": 0.4964967383425948,
+        "n_ones": 2084,
+        "n_zeros": 2055,
+        "n_samples": 4139,
+        "alpha": 0.0
+      },
+      "class_1": {
+        "p_1": 0.5010033444816053,
+        "p_0": 0.49899665551839467,
+        "n_ones": 749,
+        "n_zeros": 746,
+        "n_samples": 1495,
+        "alpha": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "csv_path": "/mnt/0768adeb-073e-454e-b499-10f81dc4a37a/Projects/faculdade/IA/estudo-dirigido-segunda-va/dataset/WA_Fn-UseC_-Telco-Customer-Churn.csv",
+  "csv_sha256": "88be4b93fbe0cc83421af1c503794c97c342eca914c1576db7c276e61d61358a",
+  "random_state": 42,
+  "test_size": 0.2,
+  "stratified": true,
+  "total_samples": 7043,
+  "train_samples": 5634,
+  "test_samples": 1409,
+  "total_class_counts": {
+    "0": 5174,
+    "1": 1869
+  },
+  "total_class_proportions": {
+    "0": 0.7346301292063041,
+    "1": 0.2653698707936959
+  },
+  "train_class_counts": {
+    "0": 4139,
+    "1": 1495
+  },
+  "train_class_proportions": {
+    "0": 0.7346467873624423,
+    "1": 0.2653532126375577
+  },
+  "test_class_counts": {
+    "0": 1035,
+    "1": 374
+  },
+  "test_class_proportions": {
+    "0": 0.7345635202271115,
+    "1": 0.2654364797728886
+  }
+}

@@ -1,0 +1,68 @@
+======================================================================
+ESTUDO DIRIGIDO - INTELIGÊNCIA ARTIFICIAL 2026.1 (UFAPE)
+RELATÓRIO DE EXECUÇÃO: LOTE 2 (ESTIMADORES E ANÁLISES UNIVARIADAS)
+======================================================================
+1. PROBABILIDADES A PRIORI ESTIMADAS NO TREINO (N = 5634):
+  - P(Churn = 0) [pi_0]: 0.734647 (4139 amostras, log = -0.308365)
+  - P(Churn = 1) [pi_1]: 0.265353 (1495 amostras, log = -1.326693)
+----------------------------------------------------------------------
+2. PARÂMETROS GAUSSIANOS MLE (ddof=0, divisor N):
+  - Feature 1: tenure (meses [0, 72]):
+      Classe 0: mu=37.5876, var=582.7652, sigma=24.1405
+      Classe 1: mu=18.3585, var=389.3256, sigma=19.7313
+      Pontos Lambda=1: [-72.45, 31.76]
+      Fronteira MAP: Raízes [-38.40645331594791, -2.279114179136688]
+      Exemplo Cliente recente (3 meses) (x=3.0):
+        - Likelihoods: L(0)=5.92e-03, L(1)=1.49e-02
+        - Lambda: 2.5222
+        - Evidência (P(x)): P(x|0)*P(Y=0) + P(x|1)*P(Y=1) = 5.92e-03*0.7346 + 1.49e-02*0.2654 = 8.31e-03
+        - Posteriors: P(Y=0|x) = 0.5233, P(Y=1|x) = 0.4767
+        - Decisão MAP: 0
+      Exemplo Cliente antigo / fiel (60 meses) (x=60.0):
+        - Likelihoods: L(0)=1.07e-02, L(1)=2.18e-03
+        - Lambda: 0.2031
+        - Evidência (P(x)): P(x|0)*P(Y=0) + P(x|1)*P(Y=1) = 1.07e-02*0.7346 + 2.18e-03*0.2654 = 8.47e-03
+        - Posteriors: P(Y=0|x) = 0.9317, P(Y=1|x) = 0.0683
+        - Decisão MAP: 0
+
+  - Feature 2: MonthlyCharges (dólares [18.25, 118.75]):
+      Classe 0: mu=61.3432, var=969.1787, sigma=31.1316
+      Classe 1: mu=74.8602, var=604.9399, sigma=24.5955
+      Pontos Lambda=1: [57.74, 136.88]
+      Fronteira MAP: Discriminante Delta = -6.61e-04, Raízes []
+      Exemplo Plano básico / econômico ($25.00) (x=25.0):
+        - Likelihoods: L(0)=6.48e-03, L(1)=2.08e-03
+        - Lambda: 0.3206
+        - Evidência (P(x)): P(x|0)*P(Y=0) + P(x|1)*P(Y=1) = 6.48e-03*0.7346 + 2.08e-03*0.2654 = 5.31e-03
+        - Posteriors: P(Y=0|x) = 0.8962, P(Y=1|x) = 0.1038
+        - Decisão MAP: 0
+      Exemplo Plano avançado / fibra ($85.00) (x=85.0):
+        - Likelihoods: L(0)=9.60e-03, L(1)=1.49e-02
+        - Lambda: 1.5518
+        - Evidência (P(x)): P(x|0)*P(Y=0) + P(x|1)*P(Y=1) = 9.60e-03*0.7346 + 1.49e-02*0.2654 = 1.10e-02
+        - Posteriors: P(Y=0|x) = 0.6408, P(Y=1|x) = 0.3592
+        - Decisão MAP: 0
+----------------------------------------------------------------------
+3. PARÂMETRO BERNOULLI MLE (alpha=0.0 (Sem Suavização)):
+  - Feature 3: gender (Female=0, Male=1):
+      Classe 0: P(Male|0)=0.5035, P(Female|0)=0.4965 (Male=2084, Female=2055)
+      Classe 1: P(Male|1)=0.5010, P(Female|1)=0.4990 (Male=749, Female=746)
+      Exemplo Female (0) (x=0):
+        - Likelihoods: L(0)=4.96e-01, L(1)=4.99e-01
+        - Lambda: 1.0050
+        - Evidência (P(x)): P(x|0)*P(Y=0) + P(x|1)*P(Y=1) = 4.96e-01*0.7346 + 4.99e-01*0.2654 = 4.97e-01
+        - Posteriors: P(Y=0|x) = 0.7337, P(Y=1|x) = 0.2663
+        - Decisão MAP: 0
+      Exemplo Male (1) (x=1):
+        - Likelihoods: L(0)=5.04e-01, L(1)=5.01e-01
+        - Lambda: 0.9950
+        - Evidência (P(x)): P(x|0)*P(Y=0) + P(x|1)*P(Y=1) = 5.04e-01*0.7346 + 5.01e-01*0.2654 = 5.03e-01
+        - Posteriors: P(Y=0|x) = 0.7356, P(Y=1|x) = 0.2644
+        - Decisão MAP: 0
+----------------------------------------------------------------------
+4. SÍNTESE COMPARATIVA E NOTAS METODOLÓGICAS:
+  - tenure: Tempo de permanência do cliente na operadora em meses inteiros [0, 72]. Aproximado por distribuição contínua Gaussiana condicional à classe. Essa premissa simplificadora ignora o pico expressivo em 0-5 meses e a cauda pesada de clientes muito antigos, além de alocar suporte teórico em valores negativos, o que representa uma ressalva estrutural importante na avaliação contínua do atributo empírico.
+  - MonthlyCharges: Valor contínuo cobrado mensalmente em dólares [18.25, 118.75]. A modelagem inicial assume distribuição paramétrica Gaussiana, o que representa uma limitação estrutural frente à bimodalidade empírica observada no histograma do treino (clientes com planos básicos vs pacotes premium), já que a Gaussiana impõe um formato de sino simétrico centrado na média.
+  - gender: Variável demográfica categórica binária (Female=0, Male=1). Modelada pela distribuição de Bernoulli com estimação MLE de frequências diretas.
+  - ZERO DATA LEAKAGE: Nenhum dado de teste foi utilizado no ajuste ou na seleção de exemplos.
+======================================================================

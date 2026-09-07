@@ -1,0 +1,46 @@
+{
+  "benchmark_partition": "training_set_only",
+  "n_samples": 5634,
+  "max_abs_diff_log_joint": 2.1316282072803006e-14,
+  "max_abs_diff_posteriors": 3.6637359812630166e-15,
+  "prediction_agreement_count": 5634,
+  "prediction_agreement_rate": 1.0,
+  "tolerance_status": {
+    "rtol": 1e-09,
+    "atol": 1e-12,
+    "log_joint_passed": true,
+    "posteriors_passed": true,
+    "predictions_identical": true
+  },
+  "continuous_features_params": {
+    "tenure": {
+      "manual_mu0": 37.58758154143513,
+      "sklearn_mu0": 37.58758154143513,
+      "manual_var0": 582.765161075436,
+      "sklearn_var0": 582.7651610754301,
+      "manual_mu1": 18.358528428093646,
+      "sklearn_mu1": 18.358528428093646,
+      "manual_var1": 389.32563796825536,
+      "sklearn_var1": 389.32563796825735
+    },
+    "MonthlyCharges": {
+      "manual_mu0": 61.34318676008698,
+      "sklearn_mu0": 61.34318676008686,
+      "manual_var0": 969.1786899895228,
+      "sklearn_var0": 969.1786899895247,
+      "manual_mu1": 74.86016722408027,
+      "sklearn_mu1": 74.86016722408033,
+      "manual_var1": 604.939943450297,
+      "sklearn_var1": 604.9399434502972
+    }
+  },
+  "categorical_feature_params": {
+    "gender": {
+      "manual_p0": 0.5035032616574052,
+      "sklearn_p0": 0.5035032616574056,
+      "manual_p1": 0.5010033444816053,
+      "sklearn_p1": 0.5010033444816054,
+      "alpha": 0.0
+    }
+  }
+}
